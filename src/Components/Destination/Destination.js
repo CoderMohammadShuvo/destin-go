@@ -43,7 +43,7 @@ const Destination = () => {
     }
   };
   return (
-    <div>
+    <div className="destination-main">
       <div className="destination-detail">
         {!searchSuccessful ? (
           <div>
@@ -77,6 +77,7 @@ const Destination = () => {
                   showYearDropdown
                   scrollableMonthYearDropdown
                   isClearable
+                  placeholderText="Date"
                   className="ride-form-input"
                 ></DatePicker>
               </div>

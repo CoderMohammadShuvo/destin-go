@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import logo from "../../images/ce1a40f50a3b449dabf8fac4625d0aeb.png"
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
@@ -15,7 +16,7 @@ function NavBar() {
       <nav className="navbar">
         <div className="nav-container">
           <NavLink exact to="/" className="nav-logo">
-            CodeBucks
+            <img src={logo} alt="" className="logo-img"/>
           </NavLink>
 
           <ul className={click ? "nav-menu active" : "nav-menu"}>
