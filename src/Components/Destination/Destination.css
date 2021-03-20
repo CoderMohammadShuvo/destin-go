@@ -7,6 +7,8 @@
     flex-direction: column;
     padding: 20px;
     align-items: center;
+    background-color: lightgrey;
+    border-radius: 10px;
 }
 .ride-form-input {
     margin: 5px 0px;
@@ -15,6 +17,9 @@
 .submit-input{
     margin: 5px 0px;
     padding: 5px 73px;
+    background-color: #FF6E40;
+    border:2px solid #FF6E40;
+    color:#fff
 }
 .after-serch-main{
     display: flex;
@@ -90,7 +95,7 @@
 @media (min-width: 992px) and (max-width: 1199.98px) {
     .destination-main{
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 2fr;
     }
     .destination-detail {
         width: 90%;
@@ -107,7 +112,7 @@
 @media (min-width: 1200px) { 
     .destination-main{
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 2fr;
     }
     .destination-detail {
         width: 90%;

@@ -14,8 +14,7 @@ import {
   faGithub,
   faGoogle,
 } from "@fortawesome/free-brands-svg-icons";
-import { Form, Button, Card, Container,Alert } from "react-bootstrap";
-
+import { Form, Button, Card, Container, Alert } from "react-bootstrap";
 
 const Login = () => {
   let history = useHistory();
@@ -62,19 +61,38 @@ const Login = () => {
   };
 
   let handleFacebookSignIn = () => {
-    console.log("fb sign in");
-  };
-
-  let handleGithubSignIn = () => {
-    console.log("gh sign in");
+    var facebookProvider = new firebase.auth.FacebookAuthProvider();
+    firebase
+      .auth()
+      .signInWithPopup(facebookProvider)
+      .then((result) => {
+        var credential = result.credential;
+        var user = result.user;
+        var accessToken = credential.accessToken;
+        const { displayName, email } = user;
+        const signedInUser = { name: displayName, email };
+        setLoggedInUser(signedInUser);
+        history.replace(from);
+        setError("");
+        // setSuccess(true);
+      })
+      .catch((error) => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        var email = error.email;
+        var credential = error.credential;
+        // setLoggedInUser({});
+        setError(errorMessage);
+        // setSuccess(false);
+      });
   };
   let handleBlur = (e) => {
     e.preventDefault();
     let isFormValid;
-    if(newUser){
-        if (nameRef.current.value > 5) {
-            isFormValid = true;
-          }
+    if (newUser) {
+      if (nameRef.current.value > 5) {
+        isFormValid = true;
+      }
     }
     if (/\S+@\S+\.\S+/.test(emailRef.current.value)) {
       isFormValid = true;
@@ -89,11 +107,11 @@ const Login = () => {
     }
     if (isFormValid === true) {
       let user = {};
-      if(newUser){
+      if (newUser) {
         user.name = nameRef.current.value;
       }
-      user.email = emailRef.current.value; 
-        user.password=passwordRef.current.value;
+      user.email = emailRef.current.value;
+      user.password = passwordRef.current.value;
       setLoggedInUser(user);
     }
   };
@@ -116,7 +134,6 @@ const Login = () => {
           history.replace(from);
           setError("");
           // setSuccess(true);
-
         })
         .catch((error) => {
           var errorCode = error.code;
@@ -162,7 +179,7 @@ const Login = () => {
         console.log("user name updated");
       })
       .catch(function (error) {
-       console.log(error);
+        console.log(error);
       });
   };
 
@@ -179,16 +196,18 @@ const Login = () => {
                 {newUser ? "Register" : "Log In"}
               </h2>
               {error && <p className="error">{error}</p>}
-              <Form onSubmit={handleSubmit} >
-                {newUser && <Form.Group id="name" className="my-4">
-                  <Form.Control
-                    type="text"
-                    ref={nameRef}
-                    placeholder="Name"
-                    onBlur={handleBlur}
-                    required
-                  ></Form.Control>
-                </Form.Group>}
+              <Form onSubmit={handleSubmit}>
+                {newUser && (
+                  <Form.Group id="name" className="my-4">
+                    <Form.Control
+                      type="text"
+                      ref={nameRef}
+                      placeholder="Name"
+                      onBlur={handleBlur}
+                      required
+                    ></Form.Control>
+                  </Form.Group>
+                )}
                 <Form.Group id="email" className="my-4">
                   <Form.Control
                     type="email"
@@ -256,9 +275,6 @@ const Login = () => {
           </a>
           <a className="icon facebook" href="#" onClick={handleFacebookSignIn}>
             <FontAwesomeIcon icon={faFacebookF} />
-          </a>
-          <a className="icon github" href="#" onClick={handleGithubSignIn}>
-            <FontAwesomeIcon icon={faGithub} />
           </a>
         </div>
       </Container>

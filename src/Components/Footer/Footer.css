@@ -1,0 +1,9 @@
+.copyright-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+.copyright{
+    color: #343a40;
+}

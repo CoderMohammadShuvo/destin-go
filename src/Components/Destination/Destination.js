@@ -14,6 +14,13 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import Map, { WrappedMap } from "../Map/Map";
+import {
+  withScriptjs,
+  withGoogleMap,
+  GoogleMap,
+  Marker,
+} from "react-google-maps";
 
 const Destination = () => {
   let { vehicleName } = useParams();
@@ -37,7 +44,7 @@ const Destination = () => {
   };
   let handleSubmit = (e) => {
     e.preventDefault();
-    if (pickFrom !== "" && dropTo !== "" && selectedDate!== null) {
+    if (pickFrom !== "" && dropTo !== "" && selectedDate !== null) {
       setSearchSuccessful(!searchSuccessful);
       console.log(searchSuccessful);
     }
@@ -108,7 +115,7 @@ const Destination = () => {
                   <FontAwesomeIcon icon={faCalendarAlt} />
                   <span>
                     {" "}
-                    Date : <span>{""+selectedDate.toDateString()}</span>
+                    Date : <span>{"" + selectedDate.toDateString()}</span>
                   </span>
                 </p>
               </div>
@@ -142,7 +149,13 @@ const Destination = () => {
         )}
       </div>
       <div className="map-div">
-        <img src={mapImg} alt="" className="map" />
+        <div style={{width:'100%',height:'70vh'}}>
+          <WrappedMap googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyDZPJVvXUSCU-bdgO5bNRrZcUEnWu-LLD8`} 
+          loadingElement={<div style={{ height: `100%` }} />}
+          containerElement={<div style={{ height: `100%` }} />}
+          mapElement={<div style={{ height: `100%` }} />}
+          ></WrappedMap>
+        </div>
       </div>
     </div>
   );
