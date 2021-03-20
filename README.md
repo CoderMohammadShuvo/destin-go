@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# React Authentication project-destiniGo transportation Website
+A web  application created with html,css,javascript,react,react-bootstrap,firebase.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### website link
+https://react-auth-6f7ad.web.app/
 
-## Available Scripts
+## Features
+* This website has different tranportation options for users on its home page.
+* By clicking on a transportation option the user will be redirected to its detailes page (if the user is logged in).or to the log in /registration page.
+* In the logged in/ registration page the user can create an account by giving his name ,email and password or using google and facebook authentication service.if the user has already has an account he can simply sign in giving his email and password or again using google or facebook.
+* After logging in the user will be redirected to his preffered page
+* in the destination page the user can select his preffered pick up and drop off place and date. by clicking search he will get different options for this selected transport. he can also see the google map on this page.
 
-In the project directory, you can run:
 
-### `npm start`
+## Tech/framework used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<b>Built with</b>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* html
+* css
+* javascript
+* react
+* react-router
+* react-bootstrap
+* firebase authentication
+ 
+## Screenshots
+![js-standard-style](./src/images/screenshots/React-App-(1).png)
+![js-standard-style](./src/images/screenshots/React-App-(2).png)
+![js-standard-style](./src/images/screenshots/React-App-(3).png)
+![js-standard-style](./src/images/screenshots/React-App-(4).png)
+![js-standard-style](./src/images/screenshots/React-App-(5).png)
+![js-standard-style](./src/images/screenshots/React-App-(6).png)
+![js-standard-style](./src/images/screenshots/React-App-(7).png)
 
-### `npm test`
+## Installation and Setup Instructions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
 
-### `npm run build`
+Installation:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`npm install`  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To Run Test Suite:  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`npm test`  
 
-### `npm run eject`
+To Start Server:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+`npm start`  
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To Visit App:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+`localhost:3000/ideas` 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## How to use 
 
-## Learn More
+* Go to the website home to view different transportation options like cars,bike,train,bus.
+* Click on the ***transport Card*** to see the detail 
+* on the ***Log In*** page you can log in or create an account manually or using Google or Facebook
+* on the ***Destination page*** you can choose your drop off and pick up point ans choose date
+* on the ***Destination page*** you can also see google map
+* by choosing place and date you can see different transportation options
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Credits
+I have done this project as an assignment of programming hero web development course. Most of the technologies I have used here is taught by our respectable instructor Jhankar Mahbub.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+© [Tasnuva Rahman](https://github.com/tasnuvatina)
