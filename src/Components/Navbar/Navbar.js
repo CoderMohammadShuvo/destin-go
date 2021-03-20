@@ -14,7 +14,6 @@ import firebaseConfig from "../Login/firebase.config";
 function NavBar() {
   const [click, setClick] = useState(false);
   const [loggedInUser, setLoggedInUser] = useContext(userContext);
-  console.log(loggedInUser);
 
   const handleClick = () => setClick(!click);
   const handleSignOut=()=>{
