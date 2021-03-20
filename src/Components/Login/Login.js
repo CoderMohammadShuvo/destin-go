@@ -28,7 +28,6 @@ const Login = () => {
 
   let [newUser, setNewUser] = useState(false);
   let [loggedInUser, setLoggedInUser] = useContext(userContext);
-  // let [success,setSuccess]=useContext(userContext);
   const [error, setError] = useState("");
   if (firebase.apps.length === 0) {
     firebase.initializeApp(firebaseConfig);
@@ -47,16 +46,14 @@ const Login = () => {
         setLoggedInUser(signedInUser);
         history.replace(from);
         setError("");
-        // setSuccess(true);
       })
       .catch((error) => {
         var errorCode = error.code;
         var errorMessage = error.message;
         var email = error.email;
         var credential = error.credential;
-        // setLoggedInUser({});
         setError(errorMessage);
-        // setSuccess(false);
+
       });
   };
 
@@ -74,16 +71,13 @@ const Login = () => {
         setLoggedInUser(signedInUser);
         history.replace(from);
         setError("");
-        // setSuccess(true);
       })
       .catch((error) => {
         var errorCode = error.code;
         var errorMessage = error.message;
         var email = error.email;
         var credential = error.credential;
-        // setLoggedInUser({});
         setError(errorMessage);
-        // setSuccess(false);
       });
   };
   let handleBlur = (e) => {
@@ -106,13 +100,13 @@ const Login = () => {
       }
     }
     if (isFormValid === true) {
-      let user = {};
+      let nUser = {};
       if (newUser) {
-        user.name = nameRef.current.value;
+        nUser.name = nameRef.current.value;
       }
-      user.email = emailRef.current.value;
-      user.password = passwordRef.current.value;
-      setLoggedInUser(user);
+      nUser.email = emailRef.current.value;
+      nUser.password = passwordRef.current.value;
+      setLoggedInUser(nUser);
     }
   };
   let handleSubmit = (e) => {
@@ -133,14 +127,11 @@ const Login = () => {
           console.log(loggedInUser);
           history.replace(from);
           setError("");
-          // setSuccess(true);
         })
         .catch((error) => {
           var errorCode = error.code;
           var errorMessage = error.message;
-          // setLoggedInUser({});
           setError(errorMessage);
-          // setSuccess(false);
         });
     }
 
@@ -150,21 +141,17 @@ const Login = () => {
         .signInWithEmailAndPassword(loggedInUser.email, loggedInUser.password)
         .then((userCredential) => {
           var user = userCredential.user;
-          // updateUserInfo(user.name);
           const { displayName, email } = user;
           const signedInUser = { name: displayName, email };
           setLoggedInUser(signedInUser);
           console.log(loggedInUser);
           history.replace(from);
           setError("");
-          // setSuccess(true);
         })
         .catch((error) => {
           var errorCode = error.code;
           var errorMessage = error.message;
-          // setLoggedInUser({});
           setError(errorMessage);
-          // setSuccess(false);
         });
     }
   };

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import mapImg from "../../images/Map.png";
 import HomeVehicleFakeData from "../../FakeData/HomeVehicleFakeData";
 import "./Destination.css";
 
@@ -29,7 +28,6 @@ const Destination = () => {
     (vehicle) => vehicle.vehicle_name === vehicleName
   );
   let { vehicle_detail, vehicle_img } = chosenVehicle;
-  // console.log(vehicle_detail, vehicle_img);
   let [searchSuccessful, setSearchSuccessful] = useState(false);
   let [pickFrom, setPickFrom] = useState("");
   let [dropTo, setDropTo] = useState("");
@@ -149,11 +147,12 @@ const Destination = () => {
         )}
       </div>
       <div className="map-div">
-        <div style={{width:'100%',height:'70vh'}}>
-          <WrappedMap googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyDZPJVvXUSCU-bdgO5bNRrZcUEnWu-LLD8`} 
-          loadingElement={<div style={{ height: `100%` }} />}
-          containerElement={<div style={{ height: `100%` }} />}
-          mapElement={<div style={{ height: `100%` }} />}
+        <div style={{ width: "100%", height: "70vh" }}>
+          <WrappedMap
+            googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyDZPJVvXUSCU-bdgO5bNRrZcUEnWu-LLD8`}
+            loadingElement={<div style={{ height: `100%` }} />}
+            containerElement={<div style={{ height: `100%` }} />}
+            mapElement={<div style={{ height: `100%` }} />}
           ></WrappedMap>
         </div>
       </div>
