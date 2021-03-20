@@ -1,0 +1,28 @@
+
+.login{
+    text-align: center;
+    background-color: #fff;
+}
+.form-button{
+  background-color: #FF6E40;
+  border:0px;
+  padding:10px 0px;
+  border-radius: 5px;
+}
+.error{
+  color:red;
+}
+.icon {
+    font-size: 35px;
+    font-weight: 800;
+    margin: 5px 15px;
+  }
+  .google {
+    color:#F4B400;
+  }
+  .facebook{
+    color:#3b5998
+  }
+  .github{
+    color: black;
+  }

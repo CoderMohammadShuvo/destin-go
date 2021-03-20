@@ -1,0 +1,37 @@
+.home-body{
+    background-image: url("../../images/newbg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* min-height:100%;
+    position: fixed;
+    min-width: 100%; */
+    width: 100%;
+    height: auto;
+    /* z-index:-10; */
+
+}
+
+.home-vehicle-cards{
+    display: flex;
+    justify-content: center;
+}
+.single-vehicle-link{
+    text-decoration: none;
+}
+.single-vehicle-card{
+    padding: 25px 40px 2px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 20px 20px;
+}
+.single-vehicle-card h2 {
+    margin-top: 0px;
+    text-decoration: none;
+    color: black;
+}
+.vehicle-img{
+    width: 150px;
+    height: 150px;
+}
