@@ -9,6 +9,8 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { userContext } from "../../App";
 function NavBar() {
   const [click, setClick] = useState(false);
+  const [loggedInUser, setLoggedInUser] = useContext(userContext);
+  console.log(loggedInUser);
 
   const handleClick = () => setClick(!click);
   return (
@@ -76,6 +78,9 @@ function NavBar() {
                 Log In
               </NavLink>
             </li>
+            {loggedInUser.email && <li className="nav-item">
+              <h5 className="nav-links">{loggedInUser.email}</h5>
+            </li>}
           </ul>
           <div className="nav-icon" onClick={handleClick}>
             <FontAwesomeIcon icon={faBars} />
