@@ -20,8 +20,8 @@
 .submit-input {
     margin: 5px 0px;
     padding: 5px 73px;
-    background-color: #FF6E40;
-    border: 2px solid #FF6E40;
+    background-color: #006271;
+    border: 2px solid #006271;
     color: #fff
 }
 
@@ -32,7 +32,7 @@
 }
 
 .after-search {
-    background-color: #FF6E40;
+    background-color: #d37088;
     color: #fff;
     margin: 10px;
     padding: 10px;

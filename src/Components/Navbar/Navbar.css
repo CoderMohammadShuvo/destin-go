@@ -20,7 +20,6 @@
   }
   
   .nav-logo {
-    color: #f5b921;
     align-items: center;
     margin-left: 20px;
     cursor: pointer;
@@ -48,7 +47,7 @@
   }
   .nav-links:hover{
     text-decoration: none;
-    color:#ff6e40
+    color:#006271
   }
   .fa-code {
     margin-left: 1rem;
@@ -70,12 +69,12 @@
   
   .nav-item:hover:after {
     width: 100%;
-    background: #FF6E40;
+    background: #006271;
   }
   
   .nav-item .active {
-    color: #FF6E40;
-    border: 1px solid #FF6E40;
+    color: #006271;
+    border: 1px solid #006271;
   }
   
   .nav-icon {
@@ -103,7 +102,7 @@
       z-index: 1;
     }
     .nav-item .active {
-      color: #FF6E40;
+      color: #006271;
       border: none;
     }
     .nav-links {
@@ -120,6 +119,6 @@
       transform: translate(-100%, 60%);
       font-size: 1.8rem;
       cursor: pointer;
-      color: #FF6E40;
+      color: #006271;
     }
   }

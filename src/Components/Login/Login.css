@@ -4,7 +4,8 @@
     background-color: #fff;
 }
 .form-button{
-  background-color: #FF6E40;
+  background-color: #006271;
+  color: #fff;
   border:0px;
   padding:10px 0px;
   border-radius: 5px;
@@ -22,7 +23,4 @@
   }
   .facebook{
     color:#3b5998
-  }
-  .github{
-    color: black;
   }
