@@ -27,7 +27,12 @@ const Login = () => {
   const passwordConfirmRef = useRef();
 
   let [newUser, setNewUser] = useState(false);
-  let {loggedInUser, setLoggedInUser,isUserLoggedIn,setIsUserLoggedIn} = useContext(userContext);
+  let {
+    loggedInUser,
+    setLoggedInUser,
+    isUserLoggedIn,
+    setIsUserLoggedIn,
+  } = useContext(userContext);
   const [error, setError] = useState("");
   if (firebase.apps.length === 0) {
     firebase.initializeApp(firebaseConfig);
@@ -54,7 +59,6 @@ const Login = () => {
         var email = error.email;
         var credential = error.credential;
         setError(errorMessage);
-
       });
   };
 
