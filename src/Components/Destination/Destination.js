@@ -146,7 +146,7 @@ const Destination = () => {
         )}
       </div>
       <div className="map-div">
-              <Map pickFrom={pickFrom} dropTo={dropTo} ></Map>
+        <Map pickFrom={pickFrom} dropTo={dropTo}></Map>
       </div>
     </div>
   );

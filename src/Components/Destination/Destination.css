@@ -1,6 +1,8 @@
+
+
 .destination-detail {
     width: 90%;
-    margin: auto;
+    margin:  20px auto auto;
 }
 
 .ride-form {
@@ -68,6 +70,10 @@
         display: grid;
         grid-template-columns: 1fr;
     }
+    .ride-form {
+        margin: 30px auto ;
+        max-width: 350px;
+    }
 }
 
 
@@ -82,6 +88,10 @@
         display: grid;
         grid-template-columns: 1fr;
     }
+    .ride-form {
+        margin: 30px auto ;
+        max-width: 400px;
+    }
 }
 
 
@@ -95,6 +105,10 @@
     .destination-main {
         display: grid;
         grid-template-columns: 1fr;
+    }
+    .ride-form {
+        margin: 30px auto ;
+        max-width: 450px;
     }
 }
 
