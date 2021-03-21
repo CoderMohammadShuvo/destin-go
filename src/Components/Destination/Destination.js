@@ -13,7 +13,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import Map, { WrappedMap } from "../Map/Map";
+import Map from "../Map/Map";
 import {
   withScriptjs,
   withGoogleMap,
@@ -44,7 +44,6 @@ const Destination = () => {
     e.preventDefault();
     if (pickFrom !== "" && dropTo !== "" && selectedDate !== null) {
       setSearchSuccessful(!searchSuccessful);
-      console.log(searchSuccessful);
     }
   };
   return (
@@ -147,14 +146,7 @@ const Destination = () => {
         )}
       </div>
       <div className="map-div">
-        <div style={{ width: "100%", height: "70vh" }}>
-          <WrappedMap
-            googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyDZPJVvXUSCU-bdgO5bNRrZcUEnWu-LLD8`}
-            loadingElement={<div style={{ height: `100%` }} />}
-            containerElement={<div style={{ height: `100%` }} />}
-            mapElement={<div style={{ height: `100%` }} />}
-          ></WrappedMap>
-        </div>
+              <Map pickFrom={pickFrom} dropTo={dropTo} ></Map>
       </div>
     </div>
   );
