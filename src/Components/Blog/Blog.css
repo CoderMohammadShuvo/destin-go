@@ -1,0 +1,18 @@
+.card-style{
+    margin: 20px 50px;
+}
+.card-button{
+    margin: 5px 0px;
+    padding: 5px 73px;
+    background-color: #006271;
+    border: 2px solid #006271;
+    color: #fff;
+}
+.blog-header{
+    text-align: center;
+    margin-top: 50px;
+    color: #006271;
+}
+.blog-header-strong{
+    color: #d37088;
+}
