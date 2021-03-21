@@ -13,12 +13,13 @@ import "firebase/auth";
 import firebaseConfig from "../Login/firebase.config";
 function NavBar() {
   const [click, setClick] = useState(false);
-  const [loggedInUser, setLoggedInUser] = useContext(userContext);
+  const {loggedInUser, setLoggedInUser,isUserLoggedIn,setIsUserLoggedIn} = useContext(userContext);
 
   const handleClick = () => setClick(!click);
   const handleSignOut=()=>{
     firebase.auth().signOut().then(() => {
       setLoggedInUser({});
+      setIsUserLoggedIn(false);
     }).catch((error) => {
       console.log(error);
     });
@@ -77,7 +78,7 @@ function NavBar() {
               </NavLink>
             </li>
 
-            {!loggedInUser.email && (
+            {!isUserLoggedIn && (
               <li className="nav-item">
                 <NavLink
                   exact
@@ -90,7 +91,7 @@ function NavBar() {
                 </NavLink>
               </li>
             )}
-            {loggedInUser.email && (
+            {isUserLoggedIn && (
               <li className="nav-item">
                 <NavLink
                   exact
@@ -103,7 +104,7 @@ function NavBar() {
                 </NavLink>
               </li>
             )}
-            {loggedInUser.email && (
+            {isUserLoggedIn && (
               <li className="nav-item">
                 <h5 className="nav-links">{loggedInUser.email}</h5>
               </li>

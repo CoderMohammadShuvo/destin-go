@@ -27,7 +27,7 @@ const Login = () => {
   const passwordConfirmRef = useRef();
 
   let [newUser, setNewUser] = useState(false);
-  let [loggedInUser, setLoggedInUser] = useContext(userContext);
+  let {loggedInUser, setLoggedInUser,isUserLoggedIn,setIsUserLoggedIn} = useContext(userContext);
   const [error, setError] = useState("");
   if (firebase.apps.length === 0) {
     firebase.initializeApp(firebaseConfig);
@@ -44,6 +44,7 @@ const Login = () => {
         const { displayName, email } = user;
         const signedInUser = { name: displayName, email };
         setLoggedInUser(signedInUser);
+        setIsUserLoggedIn(true);
         history.replace(from);
         setError("");
       })
@@ -69,6 +70,7 @@ const Login = () => {
         const { displayName, email } = user;
         const signedInUser = { name: displayName, email };
         setLoggedInUser(signedInUser);
+        setIsUserLoggedIn(true);
         history.replace(from);
         setError("");
       })
@@ -124,6 +126,7 @@ const Login = () => {
           const { displayName, email } = user;
           const signedInUser = { name: displayName, email };
           setLoggedInUser(signedInUser);
+          setIsUserLoggedIn(true);
           console.log(loggedInUser);
           history.replace(from);
           setError("");
@@ -144,6 +147,7 @@ const Login = () => {
           const { displayName, email } = user;
           const signedInUser = { name: displayName, email };
           setLoggedInUser(signedInUser);
+          setIsUserLoggedIn(true);
           console.log(loggedInUser);
           history.replace(from);
           setError("");
