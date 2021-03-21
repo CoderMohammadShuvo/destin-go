@@ -1,12 +1,4 @@
-/* .home-body {
-    background-image: url("../../images/newbg.png");
-    width: 100%;
-    height: auto;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 
-} */
 .home-vedio{
     position:absolute;
         width:100%;
@@ -36,7 +28,6 @@
 }
 
 .single-vehicle-card:hover {
-    /* box-shadow: 5px 5px 5px darkgray; */
     border-bottom: 4px solid #006271;
     background-color: rgb(255, 255, 255);
 }

@@ -14,12 +14,6 @@ import {
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import Map from "../Map/Map";
-import {
-  withScriptjs,
-  withGoogleMap,
-  GoogleMap,
-  Marker,
-} from "react-google-maps";
 
 const Destination = () => {
   let { vehicleName } = useParams();

@@ -1,13 +1,14 @@
-
 import React from "react";
 import { Card } from "react-bootstrap";
 import blogData from "../../FakeData/blogData";
-import "./Blog.css"
+import "./Blog.css";
 
 const Blog = () => {
   return (
     <div>
-      <h1 className="blog-header">Destini<strong className="blog-header-strong">Go</strong> Blog</h1>
+      <h1 className="blog-header">
+        Destini<strong className="blog-header-strong">Go</strong> Blog
+      </h1>
       {blogData.map((blog) => {
         const { title, news, date } = blog;
         return (

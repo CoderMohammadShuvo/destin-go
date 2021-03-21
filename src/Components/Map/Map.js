@@ -19,24 +19,24 @@ const center = {
 
 function Map({ pickFrom, dropTo }) {
   let [directionResponse, setDirectionResponse] = useState(null);
-  console.log(pickFrom,dropTo);
+  console.log(pickFrom, dropTo);
   return (
     <LoadScript googleMapsApiKey="AIzaSyDZPJVvXUSCU-bdgO5bNRrZcUEnWu-LLD8">
       <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}>
-      {
-        pickFrom!==''&&  dropTo !=='' && <DirectionsService
-          options={{
-            destination:  dropTo ,
-            origin:  {pickFrom} ,
-            travelMode: "DRIVING",
-          }}
-          callback={(res) => {
-            if (res !== null) {
-              setDirectionResponse(res);
-            }
-          }}
-        />
-      }
+        {pickFrom !== "" && dropTo !== "" && (
+          <DirectionsService
+            options={{
+              destination: dropTo,
+              origin: { pickFrom },
+              travelMode: "DRIVING",
+            }}
+            callback={(res) => {
+              if (res !== null) {
+                setDirectionResponse(res);
+              }
+            }}
+          />
+        )}
         {directionResponse && (
           <DirectionsRenderer
             options={{
